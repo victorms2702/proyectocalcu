@@ -1,0 +1,200 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator For You</title>
+    <link class="icono" rel="icon" href="img/ChatGPT Image 16 abr 2025, 13_33_58.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="informacion">
+        <header id="landing-header">
+            <h1>acerca de mí</h1>
+            <p> soy una pagina que te permite resolver de forma rápida y sencilla distintos problemas de física. Calcula la Ley de Ohm, la Ley de Coulomb, el campo eléctrico y más, ingresando solo los datos necesarios. Ideal para estudiantes y apasionados por la ciencia que buscan una herramienta práctica y confiable. </p>
+            <a href="#landing-info" class="landing-btn">más sobre mí</a>
+        </header>
+        
+        <section id="landing-info">
+            <h2>¿Qué puede hacer esta calculadora?</h2>
+            <ul>
+            <li> Fórmulas Automáticas: Solo ingresa los datos y la página se encarga de aplicar la fórmula correcta (Ohm, Coulomb, campo eléctrico, etc.).</li>
+            <li> Resultados Rápidos y Precisos: Obtén respuestas al instante con cálculos exactos.</li>
+            <li> Interfaz Intuitiva: Diseñada para que cualquier usuario, sin importar su nivel, pueda usarla fácilmente.</li>
+            <li> Compatible con Móvil y PC: Accede desde cualquier dispositivo sin complicaciones.</li>
+            <li> Ideal para Estudiantes: Perfecta para tareas, repasos o preparación para exámenes.</li>
+            </ul>
+        </section>
+        
+        <section id="landing-caracteristicas">
+            <h2>Características principales</h2>
+            <p>
+                <ul>
+                    <li>🧲 <strong>Ley de Coulomb</strong><br>
+                        Esta ley explica la fuerza que existe entre dos cargas eléctricas. Puede ser de atracción o repulsión, dependiendo del tipo de cargas (positiva o negativa).<br><br>
+                        <strong>¿Para qué sirve?</strong><br>
+                        Para calcular la intensidad de esa fuerza y entender cómo interactúan cargas en un sistema eléctrico o atómico.
+                    </li>
+                    <li>⚡ <strong>Campo Eléctrico</strong><br>
+                        El campo eléctrico describe la influencia que una carga ejerce en el espacio alrededor de ella. Es una herramienta clave para analizar cómo se comportan las cargas en presencia de otras.<br><br>
+                        <strong>¿Para qué sirve?</strong><br>
+                        Para saber cómo una carga afecta a otra cercana y entender cómo se distribuye la energía eléctrica en un espacio.
+                    </li>
+                    <li>🔌 <strong>Ley de Ohm</strong><br>
+                        La Ley de Ohm te permite entender cómo se relacionan el voltaje, la corriente y la resistencia en un circuito eléctrico. Es esencial para resolver problemas básicos en electricidad y saber cómo fluye la energía en un sistema.<br><br>
+                        <strong>¿Para qué sirve?</strong><br>
+                        Para calcular cuánta corriente pasa por un resistor, qué voltaje se necesita o cuánta resistencia hay en un circuito.
+                    </li>
+                </ul>
+                
+                
+                <li>🧠 ¿A quién va dirigida esta página?
+                Estudiantes de secundaria y universidad que están viendo física.
+                
+                Profesores que necesitan ejemplos o herramientas para explicar en clase.
+                
+                Cualquier persona curiosa por la ciencia y la electricidad.</li>
+            </p>
+            
+        </section>
+        
+        <section id="landing-acceso">
+            <h2>¿Listo para usarla?</h2>
+            <p>adelante disfruta de la experiencia y me dejas una reseña de que tal la pasaste y compartenos con otras personas que necesiten de nuestra ayuda. </p>
+            
+        </section>
+        
+        <footer id="landing-footer">
+            <p>© 2025 victormonsalve-camiloavila-shmuelguillot | Calculadora fisica</p>
+        </footer>
+        
+        
+        <section id="calculadora">
+            
+        </section>
+    </div>
+
+    <div class="contenedor" >
+        <h2 class="titulo">Calculadora Física</h2>
+
+        <hr>
+
+        <h3>Ley de Coulomb</h3>
+        <p class="formula">Fórmula: F = k * |q₁ * q₂| / r²</p>
+        <label for="q1">Carga 1 (q₁) en C:</label>
+        <input type="number" id="q1" placeholder="Ej: 2e-6">
+        <label for="q2">Carga 2 (q₂) en C:</label>
+        <input type="number" id="q2" placeholder="Ej: 3e-6">
+        <label for="distancia">Distancia (r) en m:</label>
+        <input type="number" id="distancia" placeholder="Ej: 0.05">
+        <button onclick="calcularCoulomb()">Calcular Ley de Coulomb</button>
+        <div class="resultado" id="resultadoCoulomb"></div>
+        <button onclick="limpiarCamposCoulomb()">Limpiar Campos</button>
+
+        <hr>
+
+        <h3>Campo Eléctrico</h3>
+        <p class="formula">Fórmula: E = k * |q| / r²</p>
+        <label for="cargaCampo">Carga (q) en C:</label>
+        <input type="number" id="cargaCampo" placeholder="Ej: 3e-6">
+        <label for="distanciaCampo">Distancia (r) en m:</label>
+        <input type="number" id="distanciaCampo" placeholder="Ej: 0.02">
+        <button onclick="calcularCampo()">Calcular Campo Eléctrico</button>
+        <div class="resultado" id="resultadoCampo"></div>
+        <button onclick="limpiarCamposCampo()">Limpiar Campos</button>
+
+        <hr>
+
+        <h3>Ley de Ohm</h3>
+        <p class="formula">Fórmula: V = I * R</p>
+        <label for="voltaje">Voltaje (V):</label>
+        <input type="number" id="voltaje" placeholder="Deja en blanco si deseas calcularlo">
+        <label for="corriente">Corriente (I):</label>
+        <input type="number" id="corriente" placeholder="Deja en blanco si deseas calcularla">
+        <label for="resistencia">Resistencia (R):</label>
+        <input type="number" id="resistencia" placeholder="Deja en blanco si deseas calcularla">
+        <button onclick="calcularOhm()">Calcular Ley de Ohm</button>
+
+        <div class="resultado" id="resultadoOhm"></div> 
+        <button onclick="limpiarCamposOhm()">Limpiar Campos</button>
+
+        <!-- Conversor de Unidades -->
+        <hr>
+
+        <h3>Conversor de Unidades con Prefijos</h3>
+            <label for="valorPrefijo">Valor:</label>
+            <input type="number" id="valorPrefijo">
+        
+            <label for="dePrefijo">De:</label>
+                <select id="dePrefijo">
+                    <option value="p">pico (p)</option>
+                    <option value="n">nano (n)</option>
+                    <option value="u">micro (µ)</option>
+                    <option value="m">mili (m)</option>
+                    <option value="1">Unidad Base</option>
+                </select>
+        
+            <label for="aPrefijo">A:</label>
+                <select id="aPrefijo">
+                    <option value="p">pico (p)</option>
+                    <option value="n">nano (n)</option>
+                    <option value="u">micro (µ)</option>
+                    <option value="m">mili (m)</option>
+                    <option value="1">Unidad Base</option>
+                </select>
+        
+            <button onclick="convertirPrefijo()">Convertir</button>
+            <div class="resultado" id="resultadoPrefijo"></div>
+            <button onclick="limpiarprefijos()">Limpiar Campos</button>
+
+        <hr>
+
+        <h3>ConVersor de Unidades (M)</h3>
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor">
+
+        <label for="unidadOrigen">Unidad de Origen:</label>
+            <select id="unidadOrigen">
+                <option value="km">Kilómetro (km)</option>
+                <option value="Hm">Hectómetro (Hm)</option>
+                <option value="dam">Decámetro (dam)</option>
+                <option value="m">Metro (m)</option>
+                <option value="dm">Decímetro (dm)</option>
+                <option value="cm">Centímetro (cm)</option>
+                <option value="mm">Milímetro (mm)</option>
+                <option value="ft">Pies (ft)</option>
+                <option value="in">Pulgadas (in)</option>
+            </select>
+
+        <label for="unidadDestino">Unidad de Destino:</label>
+                <select id="unidadDestino">
+                    <option value="km">Kilómetro (km)</option>
+                    <option value="Hm">Hectómetro (Hm)</option>
+                    <option value="dam">Decámetro (dam)</option>
+                    <option value="m">Metro (m)</option>
+                    <option value="dm">Decímetro (dm)</option>
+                    <option value="cm">Centímetro (cm)</option>
+                    <option value="mm">Milímetro (mm)</option>
+                    <option value="ft">Pies (ft)</option>
+                    <option value="in">Pulgadas (in)</option>
+                </select>
+        <button onclick="convertir()">Convertir</button>
+        <div class="resultado" id="resultado"></div>
+        <button onclick="limpiarCamposCamp()">Limpiar Campos</button>
+
+        <hr>
+        <!-- Scripts -->
+        <script src="script.js"></script>
+        <script src="conversor.js"></script>
+    
+    </div>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> <!--tipo de letra orbitro pa que sepas-->
+
+    
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
