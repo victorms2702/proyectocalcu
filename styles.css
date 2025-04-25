@@ -148,7 +148,7 @@ body {
     margin-top: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 667px) {
     body {
         flex-direction: column;
         align-items: center;
@@ -259,7 +259,7 @@ section {
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 667px) {
     #landing-info,
     #landing-caracteristicas,
     #landing-acceso {
